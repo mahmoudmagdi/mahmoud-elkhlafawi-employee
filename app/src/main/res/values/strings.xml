@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Employees Pair</string>
+    <string name="project_id">project id</string>
+    <string name="employee_1">employee 1</string>
+    <string name="employee_2">employee 2</string>
+    <string name="days_overlap">days overlap</string>
+    <string name="loading_results">Loading results...</string>
+    <string name="project_list">Projects list</string>
 </resources>
