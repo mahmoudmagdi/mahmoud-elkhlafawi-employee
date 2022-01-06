@@ -1,6 +1,7 @@
 package com.sirmasolutions.khlafawi
 
 import android.annotation.SuppressLint
+import com.sirmasolutions.khlafawi.service.model.Project
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -29,4 +30,10 @@ fun getCurrentDate(): String {
     val c = Calendar.getInstance().time
     val df = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     return df.format(c)
+}
+
+class CustomComparator : Comparator<Project?> {
+    override fun compare(project1: Project?, project2: Project?): Int {
+        return project2!!.daysOverlap.compareTo(project1!!.daysOverlap)
+    }
 }

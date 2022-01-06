@@ -1,4 +1,4 @@
-package com.sirmasolutions.khlafawi
+package com.sirmasolutions.khlafawi.service.model
 
 data class Project(
     val projectId: Int,
