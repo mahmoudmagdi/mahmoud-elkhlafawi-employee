@@ -4,4 +4,5 @@
     <string name="employee_2">Employee #2</string>
     <string name="employee_1">Employee #1</string>
     <string name="project_id">Project ID</string>
+    <string name="select_text_file">Select Text File</string>
 </resources>

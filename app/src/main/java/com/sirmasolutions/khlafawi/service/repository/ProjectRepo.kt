@@ -1,5 +1,6 @@
 package com.sirmasolutions.khlafawi.service.repository
 
+import android.net.Uri
 import com.sirmasolutions.khlafawi.getDateFromString
 import com.sirmasolutions.khlafawi.service.model.Project
 import com.sirmasolutions.khlafawi.service.model.Record
@@ -19,12 +20,13 @@ import com.sirmasolutions.khlafawi.CustomComparator
 
 object ProjectRepo {
 
-    fun getDataFromTextFile(activity: MainActivity, fileName: String): ArrayList<Record> {
+    fun getDataFromTextFile(activity: MainActivity, fileName: Uri): ArrayList<Record> {
 
         val dataArray = ArrayList<Record>()
 
         // first get the file from the assets
-        val mInputStream: InputStream = activity.assets.open(fileName)
+        //val mInputStream: InputStream = activity.assets.open(fileName)
+        val mInputStream = activity.contentResolver.openInputStream(fileName)
 
         mInputStream.use { inputStream ->
 
