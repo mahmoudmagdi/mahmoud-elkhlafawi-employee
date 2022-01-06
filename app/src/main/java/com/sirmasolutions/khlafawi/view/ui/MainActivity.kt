@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     private fun openSelectFileIntent() {
         val chooseFile = Intent(Intent.ACTION_GET_CONTENT)
         chooseFile.addCategory(Intent.CATEGORY_OPENABLE)
-        chooseFile.type = "*/*"
+        chooseFile.type = "text/plain"
         startActivityForResult(
             Intent.createChooser(chooseFile, "Choose a text file"),
             PICK_FILE_RESULT_CODE

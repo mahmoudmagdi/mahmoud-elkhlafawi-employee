@@ -5,9 +5,6 @@ import com.sirmasolutions.khlafawi.getDateFromString
 import com.sirmasolutions.khlafawi.service.model.Project
 import com.sirmasolutions.khlafawi.service.model.Record
 import com.sirmasolutions.khlafawi.view.ui.MainActivity
-import java.io.BufferedReader
-import java.io.InputStream
-import java.io.InputStreamReader
 import java.lang.NullPointerException
 import java.util.*
 import java.util.regex.Matcher
@@ -16,7 +13,7 @@ import kotlin.collections.ArrayList
 import kotlin.math.abs
 import kotlin.math.ceil
 import com.sirmasolutions.khlafawi.CustomComparator
-
+import java.io.*
 
 object ProjectRepo {
 
@@ -24,10 +21,7 @@ object ProjectRepo {
 
         val dataArray = ArrayList<Record>()
 
-        // first get the file from the assets
-        //val mInputStream: InputStream = activity.assets.open(fileName)
-        val mInputStream = activity.contentResolver.openInputStream(fileName)
-
+        val mInputStream: InputStream? = activity.contentResolver.openInputStream(fileName)
         mInputStream.use { inputStream ->
 
             // start reading (line by line)
