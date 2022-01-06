@@ -2,7 +2,7 @@
 
 Task: Pair of employees that have worked as a team for the longest time.
 
-![alt text](https://github.com/mahmoudmagdi/mahmoud-elkhlafawi-employee/image.gif)
+![alt text](https://raw.githubusercontent.com/mahmoudmagdi/mahmoud-elkhlafawi-employee/master/image.gif)
 
 ## Days overlapping
 
